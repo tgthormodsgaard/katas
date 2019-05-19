@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Developer implements Employee {
 
     private String name;
@@ -25,6 +27,21 @@ public class Developer implements Employee {
 
     @Override
     public int getAllocation() {
+        return this.allocation;
+    }
+
+    @Override
+    public List<Employee> getEmployees() {
+        return null;
+    }
+
+    @Override
+    public boolean hasEmployees() {
+        return false;
+    }
+
+    @Override
+    public int managersAllotment() {
         return this.allocation;
     }
 }

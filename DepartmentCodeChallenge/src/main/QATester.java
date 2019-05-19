@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class QATester implements Employee {
 
     private String name;
@@ -26,6 +28,21 @@ public class QATester implements Employee {
 
     @Override
     public int getAllocation() {
+        return this.allocation;
+    }
+
+    @Override
+    public List<Employee> getEmployees() {
+        return null;
+    }
+
+    @Override
+    public boolean hasEmployees() {
+        return false;
+    }
+
+    @Override
+    public int managersAllotment() {
         return this.allocation;
     }
 }

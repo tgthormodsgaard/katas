@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface Employee {
 
     String getName();
@@ -5,4 +7,10 @@ public interface Employee {
     EmployeeType getType();
 
     int getAllocation();
+
+    List<? extends Employee> getEmployees();
+
+    boolean hasEmployees();
+
+    int managersAllotment();
 }

@@ -38,4 +38,20 @@ public class Manager implements Employee {
     public List<Employee> getEmployees() {
         return this.employees;
     }
+
+    public boolean hasEmployees() {
+        return !employees.isEmpty();
+    }
+
+    public int managersAllotment() {
+        int allotmentTotal = this.allocation;
+        for(Employee employee: this.employees) {
+            if(EmployeeType.MANAGER.equals(employee.getType())) {
+                allotmentTotal += employee.managersAllotment();
+            } else {
+                allotmentTotal += employee.getAllocation();
+            }
+        }
+        return allotmentTotal;
+    }
 }
